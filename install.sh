@@ -8,6 +8,7 @@ apt-get -y install htop
 apt-get -y install python
 apt-get -y install curl
 apt-get -y install wget
+apt-get -y install build -essential
 
 #4add-apt-rwpository 
 apt-get -y install apt-file
