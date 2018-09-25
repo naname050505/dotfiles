@@ -1,3 +1,4 @@
+
 if has('vim_starting')
     " 初回起動時のみruntimepathにNeoBundleのパスを指定する
     set runtimepath+=~/.vim/bundle/neobundle.vim/
@@ -27,7 +28,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 " NeoBundle自身を管理
 NeoBundleFetch 'Shougo/neobundle.vim'
 "----------------------------------------------------------
-" ここに追加したいVimプラグインを記述するã»・・・・・②
+" ここに追加したいVimプラグインを記述する・・・・・・②
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'croaker/mustang-vim'
 NeoBundle 'nanotech/jellybeans.vim'
@@ -38,6 +39,7 @@ NeoBundle 'ConradIrwin/vim-bracketed-paste'
 NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'ervandew/supertab'
 NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'itchyny/lightline.vim'
 "↓上手くDLできないのでコメントアウト
 "NeoBundle 'jacoborus/tender.vim'
  
@@ -45,8 +47,15 @@ NeoBundle 'Lokaltog/vim-powerline'
 " インストール
 "----------------------------------------------------------
 syntax enable " 構文に色を付ける
-colorscheme tomorrow-night-eighties
-"colorscheme  tender
+"colorscheme challenger_deep
+"colorscheme dracula
+"
+"
+"mkdir ~/.vim/colors
+"cd ~/.vim/colors
+"git clone https://github.com/chriskempson/tomorrow-theme.git 
+"cp tomorrow-theme/vim/colors/Tomorrow-Night-Eighties.vim ./
+colorscheme Tomorrow-Night-Eighties
 set t_Co=256
 set guifont=Menlo\ Regular:h10
 "----------------------------------------------------------
@@ -55,7 +64,7 @@ call neobundle#end()
 " ファイルタイプ別のVimプラグイン/インデントを有効にする
 filetype plugin indent on
 
-" 未インストールのVimプラグインがある場合、インストールすããどうかを尋ねてくれるようにする設定・・・・・・③
+" 未インストールのVimプラグインがある場合、インストールするかどうかを尋ねてくれるようにする設定・・・・・・③
 NeoBundleCheck
 
 "====================================================
@@ -64,9 +73,8 @@ NeoBundleCheck
 set number
 set whichwrap=b,s,[,],<,>
 set mouse=a
-"Link yunk & clipboard !! 
-"Linuxの場合はset clipboard=unnamedplus
-set clipboard=unnamed
+"Link yunk & clipboard !!
+set clipboard=unnamedplus
 set backspace=indent,eol,start
 
 set expandtab
@@ -121,7 +129,7 @@ set statusline=%n\:%y%F\ \|%{(&fenc!=''?&fenc:&enc).'\|'.&ff.'\|'}%m%r%=<%l/%L:%
 highlight StatusLine   term=NONE cterm=NONE ctermfg=white ctermbg=darkgray
 
 set hlsearch
-" ESCを二回押ããとã§ハイライトを消す
+" ESCを二回押すことでハイライトを消す
 nmap <silent> <Esc><Esc> :nohlsearch<CR>
 vnoremap <silent> <C-p> "0p<CR>
 
