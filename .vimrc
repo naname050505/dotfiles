@@ -1,4 +1,6 @@
-
+" NeoBundle関連
+" =================================================================
+"
 if has('vim_starting')
     " 初回起動時のみruntimepathにNeoBundleのパスを指定する
     set runtimepath+=~/.vim/bundle/neobundle.vim/
@@ -67,8 +69,13 @@ filetype plugin indent on
 " 未インストールのVimプラグインがある場合、インストールするかどうかを尋ねてくれるようにする設定・・・・・・③
 NeoBundleCheck
 
+" NeoBundle関連ここまで
 "====================================================
 
+
+" システム全般
+"====================================================
+"
 
 set number
 set whichwrap=b,s,[,],<,>
@@ -80,29 +87,31 @@ set backspace=indent,eol,start
 set expandtab
 set tabstop=4
 set shiftwidth=4
-"=================================
-map <F2> <CR>:%s/\t/    /g <CR>
-"=================================
-"vim上でF2を押せばtabを全てspaceに変換する"
 
-set nowritebackup
+"set nowritebackup
 set nobackup
 set noswapfile
 
+" システム全般ここまで
+"====================================================
+"
+
+
+" About Jedi
+"====================================================
+"
 " tab補完についてのオプション
 autocmd FileType python setlocal completeopt-=preview
 " if you cant show the predicytion with pushing tab key use two option bellow 
 " let g:SuperTabContextDefaultCompletionType = "context"
-
 " ↓ tabの補完の際に上から行くか下から行くかの設定 ONにすると上から降りていく
 let g:SuperTabDefaultCompletionType = "<c-n>"
-
 let g:jedi#completions_enabled = 1
 let g:jedi#auto_vim_configuration = 0
 let g:jedi#popup_select_first = 0
 let g:jedi#popup_on_dot = 0
 
-"関数の引数の説明(糞重いので一生いれちゃ駄目)
+" 関数の引数の説明(gekiomo)
 let g:jedi#show_call_signatures = 0
 let g:pymode_rope = 0
 let g:jedi#completions_enabled = 0
@@ -114,6 +123,11 @@ endif
 let g:neocomplete#force_omni_input_patterns.python = '\h\w*\|[^. \t]\.\w*'
 let g:neocomplete#force_omni_input_patterns.python = '%([^. t].|^s*@|^s*froms.+import |^s*from |^s*import )w*'
 
+" End of About Jedi
+"====================================================
+"
+
+
 " copy & paste map
 nnoremap <Space>d "*dd
 vnoremap <Space>d "*dd
@@ -122,16 +136,30 @@ vnoremap <Space>y "*yy
 nnoremap <Space>p "*p
 vnoremap <Space>p "*p
 
+" ====================================
 " ステータスライン関連
+" ====================================
+
 " ステータスラインに表示する情報の指定
 set statusline=%n\:%y%F\ \|%{(&fenc!=''?&fenc:&enc).'\|'.&ff.'\|'}%m%r%=<%l/%L:%p%%>
 " ステータスラインの色
 highlight StatusLine   term=NONE cterm=NONE ctermfg=white ctermbg=darkgray
 
+
+" About useful commands
+"====================================================
+"
 set hlsearch
 " ESCを二回押すことでハイライトを消す
 nmap <silent> <Esc><Esc> :nohlsearch<CR>
 vnoremap <silent> <C-p> "0p<CR>
+
+"F2を押す => tabを全て\sに変換"
+map <F2> <CR>:%s/\t/    /g <CR>
+
+" End of About useful commands
+"====================================================
+"
 
 set laststatus=2
 
@@ -157,8 +185,8 @@ let &cpo = s:cpo_save
 unlet s:cpo_save
 " 行末のスペースを可視化
 set listchars=tab:^\ ,trail:~
-" コマンドラインの履歴を10000件保存する
-set history=10000
+" コマンドラインの履歴を100件保存する
+set history=100
 " コメントの色を水色
 hi Comment ctermfg=6
 nnoremap Y y$
