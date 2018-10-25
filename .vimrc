@@ -150,8 +150,8 @@ highlight StatusLine   term=NONE cterm=NONE ctermfg=white ctermbg=darkgray
 "====================================================
 "
 set hlsearch
-" ESCを二回押すことでハイライトを消す
-nmap <silent> <Esc><Esc> :nohlsearch<CR>
+" ESCを5回押すことでハイライトを消す
+nmap <silent> <Esc><Esc><Esc><Esc><Esc> :nohlsearch<CR>
 vnoremap <silent> <C-p> "0p<CR>
 
 "F2を押す => tabを全て\sに変換"
