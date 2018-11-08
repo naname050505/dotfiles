@@ -117,7 +117,6 @@ if !exists('g:neocomplete#force_omni_input_patterns')
 endif
 
 let g:neocomplete#force_omni_input_patterns.python = '\h\w*\|[^. \t]\.\w*'
-let g:neocomplete#force_omni_input_patterns.python = '%([^. t].|^s*@|^s*froms.+import |^s*from |^s*import )w*'
 
 " End of About Jedi
 "====================================================
@@ -181,7 +180,7 @@ let &cpo = s:cpo_save
 unlet s:cpo_save
 " 行末のスペースを可視化
 set list
-set listchars=tab:»-,eol:↲
+set listchars=tab:>   
 " コマンドラインの履歴を100件保存する
 set history=100
 " コメントの色を水色
