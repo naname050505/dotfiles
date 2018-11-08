@@ -31,6 +31,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 "----------------------------------------------------------
 " ここに追加したいVimプラグインを記述する・・・・・・②
+NeoBundle 'fatih/vim-go'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'croaker/mustang-vim'
 NeoBundle 'nanotech/jellybeans.vim'
@@ -42,16 +43,11 @@ NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'ervandew/supertab'
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'itchyny/lightline.vim'
-"↓上手くDLできないのでコメントアウト
-"NeoBundle 'jacoborus/tender.vim'
  
 "----------------------------------------------------------
 " インストール
 "----------------------------------------------------------
 syntax enable " 構文に色を付ける
-"colorscheme challenger_deep
-"colorscheme dracula
-"
 "
 "mkdir ~/.vim/colors
 "cd ~/.vim/colors

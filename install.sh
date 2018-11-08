@@ -25,3 +25,10 @@ wget https://bootstrap.pypa.io/get-pip.py
 python3.6 get-pip.py
 pip install --upgrade --ignore-installed tensorflow-gpu==1.4
 pip install keras
+
+#4vimcolor
+mkdir ~/.vim/colors
+cd ~/.vim/colors
+git clone https://github.com/chriskempson/tomorrow-theme.git 
+cp tomorrow-theme/vim/colors/Tomorrow-Night-Eighties.vim ./
+
