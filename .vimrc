@@ -180,6 +180,7 @@ let b:current_after_syntax = 'python'
 let &cpo = s:cpo_save
 unlet s:cpo_save
 " 行末のスペースを可視化
+set list
 set listchars=tab:»-,eol:↲
 " コマンドラインの履歴を100件保存する
 set history=100
