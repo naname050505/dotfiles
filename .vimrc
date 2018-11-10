@@ -187,6 +187,10 @@ set history=100
 hi Comment ctermfg=6
 nnoremap Y y$
 
+" ｘでヤンク内容が消えないように設定
+noremap PP "0p
+noremap x "_x
+
 augroup vimrcEx
   au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
   \ exe "normal g`\"" | endif
