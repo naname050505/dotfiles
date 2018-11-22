@@ -77,7 +77,9 @@ set number
 set whichwrap=b,s,[,],<,>
 set mouse=a
 "Link yunk & clipboard !!
-set clipboard=unnamedplus
+"mac is set 
+set clipboard+=unnamedplus,unnamed
+"set clipboard=unnamedplus
 set backspace=indent,eol,start
 
 set expandtab
