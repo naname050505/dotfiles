@@ -89,11 +89,11 @@ set shiftwidth=4
 "set nowritebackup
 set nobackup
 set noswapfile
+"カーソルキーでABCDが入力される(viモードの回避)
+set neocompatible
 
-function! ImInActivate()
-  call system('fcitx-remote -c')
-endfunction
-inoremap <silent> <C-[> <ESC>:call ImInActivate()<CR>
+"goのバージョンが低かったとしても文句を言わせない
+let g:go_version_warning = 0
 
 " システム全般ここまで
 "====================================================
