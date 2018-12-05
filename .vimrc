@@ -90,6 +90,11 @@ set shiftwidth=4
 set nobackup
 set noswapfile
 
+function! ImInActivate()
+  call system('fcitx-remote -c')
+endfunction
+inoremap <silent> <C-[> <ESC>:call ImInActivate()<CR>
+
 " システム全般ここまで
 "====================================================
 "
