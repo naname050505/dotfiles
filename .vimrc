@@ -89,9 +89,6 @@ set shiftwidth=4
 "set nowritebackup
 set nobackup
 set noswapfile
-"カーソルキーでABCDが入力される(viモードの回避)
-"c
-set nocompatible
 
 "goのバージョンが低かったとしても文句を言わせない
 let g:go_version_warning = 0
