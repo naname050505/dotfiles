@@ -28,6 +28,7 @@ pip install --upgrade --ignore-installed tensorflow-gpu==1.4
 pip install keras
 
 #4vimcolor
+mkdir ~/.vim
 mkdir ~/.vim/colors
 cd ~/.vim/colors
 git clone https://github.com/chriskempson/tomorrow-theme.git 

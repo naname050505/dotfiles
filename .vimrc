@@ -90,6 +90,9 @@ set shiftwidth=4
 set nobackup
 set noswapfile
 
+"goのバージョンが低かったとしても文句を言わせない
+let g:go_version_warning = 0
+
 " システム全般ここまで
 "====================================================
 "
@@ -148,7 +151,8 @@ highlight StatusLine   term=NONE cterm=NONE ctermfg=white ctermbg=darkgray
 "
 set hlsearch
 " ESCを5回押すことでハイライトを消す
-nmap <silent> <Esc><Esc><Esc><Esc><Esc> :nohlsearch<CR>
+" ESCを乱打するくせが治らないので、削除
+"nmap <silent> <Esc><Esc><Esc><Esc><Esc> :nohlsearch<CR>
 vnoremap <silent> <C-p> "0p<CR>
 
 "F2を押す => tabを全て\sに変換"
