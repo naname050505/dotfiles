@@ -1,5 +1,6 @@
 apt-get -y update
 apt-get -y upgrade
+apt install -y sudo
 apt-get -y install tig
 apt-get -y install vim
 apt-get -y install tmux
