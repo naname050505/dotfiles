@@ -35,3 +35,5 @@ cd ~/.vim/colors
 git clone https://github.com/chriskempson/tomorrow-theme.git 
 cp tomorrow-theme/vim/colors/Tomorrow-Night-Eighties.vim ./
 
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
