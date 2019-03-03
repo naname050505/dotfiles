@@ -1,5 +1,7 @@
 apt-get -y update
+apt-get -y dist-upgrade
 apt-get -y upgrade
+apt install -y sudo
 apt-get -y install tig
 apt-get -y install vim
 apt-get -y install tmux
@@ -27,8 +29,11 @@ pip install --upgrade --ignore-installed tensorflow-gpu==1.4
 pip install keras
 
 #4vimcolor
+mkdir ~/.vim
 mkdir ~/.vim/colors
 cd ~/.vim/colors
 git clone https://github.com/chriskempson/tomorrow-theme.git 
 cp tomorrow-theme/vim/colors/Tomorrow-Night-Eighties.vim ./
+
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
