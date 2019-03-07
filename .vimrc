@@ -204,6 +204,7 @@ augroup END
 
 set t_8b=^[[48;2;%lu;%lu;%lum
 set t_8f=^[[38;2;%lu;%lu;%lum
+" 4 julia
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim

@@ -35,5 +35,7 @@ cd ~/.vim/colors
 git clone https://github.com/chriskempson/tomorrow-theme.git 
 cp tomorrow-theme/vim/colors/Tomorrow-Night-Eighties.vim ./
 
+#4 julia
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+brew cask install julia " 4 mac
 
