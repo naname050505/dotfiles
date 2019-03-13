@@ -37,5 +37,5 @@ cp tomorrow-theme/vim/colors/Tomorrow-Night-Eighties.vim ./
 
 #4 julia
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-brew cask install julia " 4 mac
-
+brew cask install julia # 4 mac
+sudo ln -s /Applications/Julia-0.6.app/Contents/Resources/julia/bin/julia /bin # 4 mac
