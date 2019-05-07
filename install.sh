@@ -27,6 +27,7 @@ wget https://bootstrap.pypa.io/get-pip.py
 python3.6 get-pip.py
 pip install --upgrade --ignore-installed tensorflow-gpu==1.4
 pip install keras
+pip install opencv-python
 
 #4vimcolor
 mkdir ~/.vim
