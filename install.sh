@@ -40,6 +40,8 @@ cp tomorrow-theme/vim/colors/Tomorrow-Night-Eighties.vim ./
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 brew cask install julia
 sudo ln -s /Applications/Julia-0.6.app/Contents/Resources/julia/bin/julia /bin
+git clone https://github.com/JuliaEditorSupport/julia-vim.git 
+cp -pR julia-vim/* ~/.vim
 
 #4 vim
 curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > vim_install.sh
