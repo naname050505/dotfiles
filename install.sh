@@ -47,3 +47,6 @@ cp -pR julia-vim/* ~/.vim
 curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > vim_install.sh
 sh ./vim_install.sh
 rm -rf vim_install.sh
+
+git config --global user.name "naname050505"
+
