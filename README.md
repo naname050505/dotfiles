@@ -1,2 +1,2 @@
 # Dotfiles
-* set clipboard にOS依存要素あり
+* 参考になると思った? 残念,コピペの集合でした
