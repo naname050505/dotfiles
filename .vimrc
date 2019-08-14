@@ -9,6 +9,7 @@ if has('vim_starting')
     if !isdirectory(expand("~/.vim/bundle/neobundle.vim/"))
         echo "install NeoBundle..."
         :call system("git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim")
+        :call system("git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim")    
     endif
 endif
 
@@ -77,11 +78,16 @@ set number
 set whichwrap=b,s,[,],<,>
 set mouse=a
 "Link yunk & clipboard !!
-"mac is set 
-set clipboard+=unnamedplus,unnamed
-"set clipboard=unnamedplus
-set backspace=indent,eol,start
 
+"mac is set 
+if has("mac")
+   set clipboard+=unnamedplus,unnamed
+
+elseif has("unix")
+   set clipboard=unnamedplus
+endif
+
+set backspace=indent,eol,start
 set expandtab
 set tabstop=4
 set shiftwidth=4
@@ -152,7 +158,7 @@ highlight StatusLine   term=NONE cterm=NONE ctermfg=white ctermbg=darkgray
 set hlsearch
 " ESCを5回押すことでハイライトを消す
 " ESCを乱打するくせが治らないので、削除
-"nmap <silent> <Esc><Esc><Esc><Esc><Esc> :nohlsearch<CR>
+nmap <silent> <Esc><Esc><Esc><Esc><Esc> :nohlsearch<CR>
 vnoremap <silent> <C-p> "0p<CR>
 
 "F2を押す => tabを全て\sに変換"
