@@ -220,3 +220,9 @@ call vundle#end()
 filetype plugin indent on
 " end 4 julia.  U must do vim-command :PluginInstall!
 
+" 行番号の色
+highlight LineNr ctermfg=darkyellow
+" コマンドラインモードで<Tab>キーによるファイル名補完を有効にする
+set wildmenu
+" ステータス行に現在のgitブランチを表示する
+set statusline+=%{fugitive#statusline()}
