@@ -224,5 +224,3 @@ filetype plugin indent on
 highlight LineNr ctermfg=darkyellow
 " コマンドラインモードで<Tab>キーによるファイル名補完を有効にする
 set wildmenu
-" ステータス行に現在のgitブランチを表示する
-set statusline+=%{fugitive#statusline()}
