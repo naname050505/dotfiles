@@ -224,3 +224,9 @@ filetype plugin indent on
 highlight LineNr ctermfg=darkyellow
 " コマンドラインモードで<Tab>キーによるファイル名補完を有効にする
 set wildmenu
+" U can undo forever
+if has('persistent_undo')
+  set undodir=~/.vim/undo
+  set undofile
+endif
+
