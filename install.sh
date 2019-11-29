@@ -48,10 +48,6 @@ curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.s
 sh ./vim_install.sh
 rm -rf vim_install.sh
 mkdir ~/.vim/undo
-<<<<<<< HEAD
 
 git config --global user.name "naname050505"
-
-=======
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
->>>>>>> a097e9a014692dd723260b687ab2870a89b98936
