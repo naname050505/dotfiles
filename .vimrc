@@ -99,6 +99,11 @@ set noswapfile
 "goのバージョンが低かったとしても文句を言わせない
 let g:go_version_warning = 0
 
+
+set encoding=utf-8
+set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+set fileformats=unix,dos,mac
+
 " システム全般ここまで
 "====================================================
 "
