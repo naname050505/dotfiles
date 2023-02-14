@@ -1,33 +1,29 @@
-apt-get -y update
-apt-get -y dist-upgrade
-apt-get -y upgrade
+apt -y update
+apt -y dist-upgrade
+apt -y upgrade
 apt install -y sudo
-apt-get -y install tig
-apt-get -y install vim
-apt-get -y install tmux
-apt-get -y install tig
-apt-get -y install htop
-apt-get -y install python
-apt-get -y install curl
-apt-get -y install wget
-apt-get -y install build -essential
+apt -y install tig
+apt -y install vim
+apt -y install tmux
+apt -y install tig
+apt -y install htop
+apt -y install python
+apt -y install curl
+apt -y install wget
+apt -y install build -essential
 
 #4add-apt-rwpository 
-apt-get -y install apt-file
-apt-file -y update
-apt-file -y search add-apt-repository
-apt-get -y install software-properties-common
+apt -y install apt-file
 
-#4python3
-curl -kL https://bootstrap.pypa.io/get-pip.py |  python3 #install pip
-add-apt-repository -y ppa:jonathonf/python-3.6
-apt-get -y update
-apt-get -y install python3.6 python3.6-dev
-wget https://bootstrap.pypa.io/get-pip.py
-python3.6 get-pip.py
-pip install --upgrade --ignore-installed tensorflow-gpu==1.4
-pip install keras
-pip install opencv-python
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
+echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.bash_profile
+source ~/.bash_profile
+
+git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
+echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bash_profile
+source ~/.bash_profile
 
 #4vimcolor
 mkdir ~/.vim
@@ -35,13 +31,6 @@ mkdir ~/.vim/colors
 cd ~/.vim/colors
 git clone https://github.com/chriskempson/tomorrow-theme.git 
 cp tomorrow-theme/vim/colors/Tomorrow-Night-Eighties.vim ./
-
-#4 julia(in OS X)
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-brew cask install julia
-sudo ln -s /Applications/Julia-0.6.app/Contents/Resources/julia/bin/julia /bin
-git clone https://github.com/JuliaEditorSupport/julia-vim.git 
-cp -pR julia-vim/* ~/.vim
 
 #4 vim
 curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > vim_install.sh
