@@ -1,5 +1,5 @@
 #itiou
-apt-get install -y git 
+apt install -y git 
 
 #4vimcolor
 mkdir ~/.vim
